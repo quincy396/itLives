@@ -55,11 +55,6 @@ function preload(){
     ball2.leftSound = sounds[3];
     ball3.rightSound = sounds[4];
     ball3.leftSound = sounds[5];
-    
-
-    // for(let i = 0; i < sounds.length; i++){
-    //     sounds[i] = loadSound(`sounds/${i}.mp3`)
-    // }
 }
 
 function setup(){
@@ -72,7 +67,7 @@ function draw(){
     
 }
 function back(){
-    background(230,220,190);
+    background(0);
     stroke(0)
     lines.forEach(l => drawLine(l,0,4))
 }
@@ -91,14 +86,14 @@ function move(ball){
     }
 }
 function drawCircle(x,y,d){
-    stroke(0,220,20)
-    strokeWeight(1);
-    fill(190, 80, 230)
+    stroke(80,20,200)
+    strokeWeight(2);
+    fill(0,2000,150)
     ellipse(x, y, d)
 }
 function drawLine(l){
     if (l.count<=0){
-        stroke(0)
+        stroke(255)
         strokeWeight(2);
     } else {
         stroke(255,0,0)
