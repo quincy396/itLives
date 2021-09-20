@@ -88,7 +88,7 @@ function move(ball){
 function drawCircle(x,y,d){
     stroke(80,20,200)
     strokeWeight(2);
-    fill(0,2000,150)
+    fill(0,200,150)
     ellipse(x, y, d)
 }
 function drawLine(l){
