@@ -63,28 +63,35 @@ function setup(){
 
 function draw(){
     back()
-    balls.forEach(ball => move(ball))
-    
+    balls.forEach(ball => move(ball)) 
 }
+
 function back(){
     background(0);
     stroke(0)
     lines.forEach(l => drawLine(l,0,4))
 }
+
 function move(ball){
     ball.x = ball.x + ball.speed
     drawCircle(ball.x,ball.y,ball.d)
     if (ball.x >= size-100-ball.d/2){
         ball.leftSound.play()
         line2.count = 3
-        ball.speed = -ball.speed
+        alterBall(ball)
     }
     if (ball.x <= 100+ball.d/2){
         ball.rightSound.play()
         line1.count = 3
-        ball.speed = -ball.speed
+        alterBall(ball)
     }
 }
+
+function alterBall(ball){
+    ball.d = ball.d * Math.random()
+    ball.speed = -ball.speed * Math.ceil(Math.random()*15) /5
+}
+
 function drawCircle(x,y,d){
     stroke(80,20,200)
     strokeWeight(2);
