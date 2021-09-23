@@ -1,4 +1,4 @@
-# sound game part 1 : moving parts and looping sounds
+# welcome to sound hell
 
 finished sketch:
-https://socalledsound.github.io/sound-game-1-starter/
+https://quincy396.github.io/itLives/
